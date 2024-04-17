@@ -21,8 +21,8 @@ return new class extends Migration
             $table->date('tanggal');
             $table->bigInteger('court_id')->unsigned();
             $table->foreign('court_id')->references('id')->on('courts')->onUpdate('cascade')->onDelete('cascade');
-            $table->date('starttime');
-            $table->date('endtime');
+            $table->date('starttime')->nullable();
+            $table->date('endtime')->nullable();
             $table->integer('duration');
             $table->integer('costume');
             $table->integer('shoes');
